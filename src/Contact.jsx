@@ -11,6 +11,7 @@ const Contact = () => {
 
     const InputEvent = (event) => {
         const {name, value} = event.target;
+        console.log(value);
         setData((preVal) => {
             return {
                 ...preVal,
@@ -47,7 +48,7 @@ const Contact = () => {
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" value={data.msg} onChange={InputEvent} rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="msg" value={data.msg} onChange={InputEvent} rows="3"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-outline-primary" type="submit">Submit form</button>
